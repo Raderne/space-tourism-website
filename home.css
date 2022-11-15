@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&display=swap");
+
+body {
+  background: url(./assets/home/background-home-mobile.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* ======================== NAV ======================== */
+
+/* ======================== HERO Section ======================== */
+.home-wrapper {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.home-info {
+  height: 276px;
+  row-gap: 1.5rem;
+}
+.home-description {
+  line-height: 25px;
+  padding: 0.5rem;
+}
+
+.home-btn {
+  position: relative;
+  font-size: 20px;
+  font-weight: 400;
+  color: black;
+  width: 150px;
+  height: 150px;
+  background-color: var(--title-color);
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+}
+.home-btn::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  z-index: -1;
+  transition: 0.3s;
+}
+.home-btn:hover::before {
+  transform: scale(1.5);
+  background-color: var(--back-color-gray);
+}

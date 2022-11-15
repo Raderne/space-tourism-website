@@ -1,30 +1,187 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&display=swap");
 
 :root {
-    /* ========================================= COLORS ========================================= */
-    --body-color: #0B0D17;
-    --light-cyan-color: #D0D6F9;
-    --title-color: #fff;
+  /* ========================================= COLORS ========================================= */
+  --body-color: #0b0d17;
+  --light-cyan-color: #d0d6f9;
+  --title-color: #fff;
+  --back-color-gray: #252933;
 
-    /* ========================================= Font and typography ========================================= */
-    --Heading-1: 5rem;
-    --Heading-2: 3.5rem;
-    --Heading-3: 1.75rem;
-    --Heading-4: 1.5rem;
-    --Heading-5: 1rem;
+  /* ========================================= Font and typography ========================================= */
+  /* ==================== font ==================== */
+  --Heading-1: 5rem;
+  --Heading-2: 3.5rem;
+  --Heading-3: 1.75rem;
+  --Heading-4: 1.5rem;
+  --Heading-5: 1rem;
 
-    --text-size: 15px;
+  --sub-heading1: 1.75rem;
+  --sub-heading2: 0.875rem;
 
+  --nav-text: 1rem;
+
+  --text-size: 15px;
+  /* ==================== typography ==================== */
+  --bellefair-font: "Bellefair", serif;
+  --condensed-font: "Barlow Condensed", sans-serif;
+  --text-font: "Bellefair", serif;
 }
 
 @media screen and (min-width: 1024px) {
-    :root {
-        --Heading-1: 9.375rem;
-        --Heading-2: 6.25rem;
-        --Heading-3: 3.5rem;
-        --Heading-4: 2rem;
-        --Heading-5: 1.75rem;
+  :root {
+    --Heading-1: 9.375rem;
+    --Heading-2: 6.25rem;
+    --Heading-3: 3.5rem;
+    --Heading-4: 2rem;
+    --Heading-5: 1.75rem;
 
-        --text-size: 1.125rem
-    }
+    --sub-heading1: 1.75rem;
+    --sub-heading2: 0.875rem;
+
+    --nav-text: 1rem;
+
+    --text-size: 1.125rem;
+  }
+
+  .container {
+    width: 100%;
+    height: 100%;
+    padding: 2.5rem 3.44rem 3rem 0;
+  }
 }
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--title-color);
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: var(--title-color);
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  font-family: var(--text-font);
+  font-size: var(--text-size);
+  color: var(--light-cyan-color);
+  font-weight: 400;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  padding: 1.5rem 1.5rem 3rem;
+}
+
+/* ============================================= reusable NAV ============================================= */
+
+.heading1,
+.heading2,
+.heading3,
+.heading4,
+.subHeading1 {
+  font-family: var(--bellefair-font);
+  font-weight: 400;
+}
+.heading5,
+.subHeading2,
+.nav-text {
+  font-family: var(--condensed-font);
+  font-weight: 400;
+}
+.heading1 {
+  font-size: var(--Heading-1);
+  text-transform: uppercase;
+}
+.heading2 {
+  font-size: var(--Heading-2);
+}
+.heading3 {
+  font-size: var(--Heading-3);
+}
+.heading4 {
+  font-size: var(--Heading-4);
+}
+.heading5 {
+  font-size: var(--Heading-5);
+  color: var(--light-cyan-color);
+  letter-spacing: 4.75px;
+}
+.subHeading1 {
+  font-size: var(--sub-heading1);
+}
+.subHeading2 {
+  font-size: var(--sub-heading2);
+  letter-spacing: 2.35px;
+}
+.nav-text {
+  font-size: var(--nav-text);
+  letter-spacing: 2.7px;
+}
+
+.home-nav {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.home-nav-logo {
+  width: 40px;
+  height: 40px;
+}
+@media screen and (max-width: 380px) {
+  .nav-links {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 70%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(40.7742px);
+    z-index: 10;
+  }
+}
+
+.nav-list {
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.nav-close {
+  position: absolute;
+  top: 2rem;
+  right: 1.6rem;
+  font-size: 19px;
+  cursor: pointer;
+}
+
+.burger-menu {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  display: grid;
+  place-items: center;
+  font-size: 24px;
+}
+
+/* ===== change burger ===== */
