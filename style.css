@@ -150,23 +150,33 @@ p {
 @media screen and (max-width: 380px) {
   .nav-links {
     position: fixed;
-    right: 0;
+    right: -100%;
     top: 0;
     width: 70%;
     height: 100%;
     background: rgba(255, 255, 255, 0.04);
     backdrop-filter: blur(40.7742px);
     z-index: 10;
+    transition: 0.3s;
   }
 }
 
 .nav-list {
   position: relative;
-  align-items: center;
-  justify-content: center;
   width: 100%;
   height: 100%;
+  margin-left: 2rem;
+  margin-top: 6rem;
+  gap: 2rem;
 }
+.nav-text {
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+.nav-text:hover {
+  color: cyan;
+}
+
 .nav-close {
   position: absolute;
   top: 2rem;
@@ -184,4 +194,7 @@ p {
   font-size: 24px;
 }
 
-/* ===== change burger ===== */
+/* ===== show menu ===== */
+.show-menu {
+  right: 0;
+}
